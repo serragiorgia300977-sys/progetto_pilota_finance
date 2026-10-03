@@ -146,3 +146,4 @@ gold_f_expense_income.write.mode("overwrite").format("delta").saveAsTable("lh_pe
 gold_f_budget.write.mode("overwrite").format("delta").saveAsTable("lh_personal_finance.dbo.gold_f_budget")
 
 print("Gold Layer generato con successo! Star Schema pronto.")
+spark.sql("CREATE TABLE IF NOT EXISTS lh_personal_finance.dbo.gold_misure (ID INT)").write.mode("overwrite").format("delta").saveAsTable("lh_personal_finance.dbo.gold_misure")
